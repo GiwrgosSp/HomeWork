@@ -59,7 +59,7 @@ public class StudentDao extends Database {
 
     public static void insertStudent() {
         
-
+     
     }
 
     private static Date checkDate(Scanner input) {
