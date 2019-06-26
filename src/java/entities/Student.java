@@ -8,6 +8,13 @@ public class Student {
     
     private int id;
     private String surname;
+    private String name;
+    private float grade;
+    private String birthDate;
+
+    public Student() {
+    }
+    
     
     public Student(int id,String surname, String name, float grade, String birthDate) {
         this.id = id;
@@ -24,9 +31,18 @@ public class Student {
         this.grade = grade;
         this.birthDate = birthDate;
     }
-    private String name;
-    private float grade;
-    private String birthDate;
+
+    public Student(String surname) {
+        this.surname = surname;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     
 

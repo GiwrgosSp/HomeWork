@@ -19,7 +19,8 @@ public class StudentService {
                 .append("<body>");
 
         for (Student s : students) {
-            str.append("<p>").append(s).append("</p>");
+            String delete = "<a href = 'DeleteStudent?delete=" +s.getId()+"'> Delete</a>";
+            str.append("<p>").append(s).append(delete).append("</p>");
         }
 
         str.append("</body>")
