@@ -8,9 +8,17 @@ public class Student {
     
     private int id;
     private String surname;
-
-    public Student(int id, String surname, String name, float grade, String birthDate) {
+    
+    public Student(int id,String surname, String name, float grade, String birthDate) {
         this.id = id;
+        this.surname = surname;
+        this.name = name;
+        this.grade = grade;
+        this.birthDate = birthDate;
+    }
+    
+    public Student(String surname, String name, float grade, String birthDate) {
+        
         this.surname = surname;
         this.name = name;
         this.grade = grade;
@@ -20,13 +28,7 @@ public class Student {
     private float grade;
     private String birthDate;
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    
 
     public String getSurname() {
         return surname;
@@ -63,7 +65,7 @@ public class Student {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 29 * hash + this.id;
+        
         hash = 29 * hash + Objects.hashCode(this.surname);
         hash = 29 * hash + Objects.hashCode(this.name);
         hash = 29 * hash + Float.floatToIntBits(this.grade);
@@ -83,9 +85,7 @@ public class Student {
             return false;
         }
         final Student other = (Student) obj;
-        if (this.id != other.id) {
-            return false;
-        }
+        
         if (Float.floatToIntBits(this.grade) != Float.floatToIntBits(other.grade)) {
             return false;
         }
@@ -105,6 +105,9 @@ public class Student {
     public String toString() {
         return "Student{" + "id=" + id + ", surname=" + surname + ", name=" + name + ", grade=" + grade + ", birthDate=" + birthDate + '}';
     }
+
+    
+
     
     
     

@@ -28,5 +28,12 @@ public class StudentService {
         return str.toString();
     }
 
-
+    
+    public boolean insertStudent(Student st){
+        StudentDao stuDao = new StudentDao();
+        if(stuDao.insertStudent(st)){
+            return true;
+        }
+        return false;
+    }
 }
