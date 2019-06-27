@@ -46,7 +46,7 @@ public class StudentService {
         return false;
     }
 
-    private Student getStudentById(int id) {
+    public Student getStudentById(int id) {
         StudentDao ss= new StudentDao();
         return ss.getStudentById(id);
     

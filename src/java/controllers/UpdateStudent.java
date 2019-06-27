@@ -21,7 +21,10 @@ public class UpdateStudent extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("updatestudent.jsp");
         request.setAttribute("title", "Update  Student");
         stid = request.getParameter("update");
+        int stidint = Integer.parseInt(stid);
+        StudentService ss = new StudentService();
         
+        request.setAttribute("student", ss.getStudentById(stidint));
         rd.forward(request, response);
     }
 
@@ -61,6 +64,6 @@ public class UpdateStudent extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Short description";
-    }// </editor-fold>
+    }
 
 }
