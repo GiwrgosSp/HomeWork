@@ -25,6 +25,7 @@ public class StudentDao extends Database {
     String password = "1234";
 
     private static final String selectStudents = "SELECT * FROM `bootcampdb`.`students`";
+    
 
     public List<Student> getStudents() {
         Student st;
@@ -61,6 +62,58 @@ public class StudentDao extends Database {
             
             return false;
         }
+        
+    }
+
+    public boolean deleteStudent(int id) {
+        String query= "delete from students where ID="+id;
+          int i =Database(server, database, username, password, query,(byte)1);
+        if(i>=1){
+            return true;
+        }else{
+            
+            return false;
+        }
+        
+    }
+
+    public Student getStudentById(int id) {
+        Student st;
+       String selectStudentById = "SELECT * FROM `bootcampdb`.`students` where id ="+id;
+
+        setOptions("?zeroDateTimeBehavior=convertToNull&serverTimezone=Europe/Athens&useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false");
+        ResultSet rs = Database(server, database, username, password, selectStudentById);
+        if (rs == null) {
+            System.out.println("Error to the database");
+        }
+        try {
+            rs.next();
+                st = new Student(rs.getInt("ID"), rs.getString("SURNAME"),
+                        rs.getString("NAME"), rs.getFloat("GRADE"),
+                        rs.getString("BIRTHDATE"));
+                
+                return st;
+        } catch (SQLException ex) {
+            Logger.getLogger(StudentDao.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return null;
+    }
+
+    public boolean updateStudent(Student st){
+       
+       String query = "UPDATE students SET SURNAME ='"+st.getSurname()+"',NAME='"+st.getName()+
+               "',GRADE='"+st.getGrade()+"',BIRTHDATE='"+st.getBirthDate()+"'where id='"+st.getId()+"'";
+       
+        int i =Database(server, database, username, password, query,(byte)1);
+     
+        if(i>=1){
+            return true;
+        }else{
+            
+            return false;
+        }
+        
         
     }
 }  

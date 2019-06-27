@@ -3,14 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/src/java/controllers/InsertStudent.java</file>
-            <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/src/java/daos/Database.java</file>
-            <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/src/java/controllers/DeleteStudent.java</file>
-            <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/web/newstudent.jsp</file>
+            <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/src/java/controllers/UpdateStudent.java</file>
+            <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/web/updatestudent.jsp</file>
             <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/src/java/entities/Student.java</file>
             <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/src/java/services/StudentService.java</file>
             <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/src/java/daos/StudentDao.java</file>
-            <file>file:/C:/Users/Georg/OneDrive/Έγγραφα/NetBeansProjects/HomeWork/src/java/controllers/StudentServlet.java</file>
         </group>
     </open-files>
 </project-private>
