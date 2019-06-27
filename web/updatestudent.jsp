@@ -19,7 +19,6 @@
         <form method = "POST" action="UpdateStudent">
             
             <jsp:useBean id = "student" class="entities.Student" scope = "page" />
-            Student to update:<%=request.getAttribute("student")%><br>
             <%! Student s = new Student();%>
             <% s= (Student)request.getAttribute("student"); %>
 
