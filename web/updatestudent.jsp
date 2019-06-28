@@ -15,10 +15,12 @@
     <body>
 
         <h1><%=request.getAttribute("title")%></h1>
-
+        
         <form method = "POST" action="UpdateStudent">
             
-            <jsp:useBean id = "student" class="entities.Student" scope = "page" />
+          <%--  <jsp:useBean id = "s" class="entities.Student" scope = "page"  /> --%>
+          
+          
             <%! Student s = new Student();%>
             <% s= (Student)request.getAttribute("student"); %>
 
@@ -31,3 +33,4 @@
         </form>
     </body>
 </html>
+ 
